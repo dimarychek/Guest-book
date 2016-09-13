@@ -2,7 +2,7 @@
 
     <div class="form-group">
         <label for="exampleInputEmail1">Name: *</label>
-        <input class="form-control" placeholder="Name" name="name" type="email" id="name">
+        <input class="form-control" placeholder="Name" name="name" type="text" id="name">
     </div>
 
     <div class="form-group">

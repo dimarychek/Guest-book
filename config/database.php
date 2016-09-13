@@ -54,11 +54,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'host' => 'idealab.mysql.ukraine.com.ua',
+            'port' => '3306',
+            'database' => 'idealab_guestb',
+            'username' => 'idealab_guestb',
+            'password' => 'zjl7x32h',
             'charset' => 'utf8',
             'collation' => 'utf8_general_ci',
             'prefix' => '',

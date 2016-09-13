@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMessageTable extends Migration
+class CreateMessagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,7 +15,8 @@ class CreateMessageTable extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('username', 30);
+            $table->string('name')->index();
+            $table->string('email')->nullable()->index();
             $table->text('message');
             $table->timestamps();
         });

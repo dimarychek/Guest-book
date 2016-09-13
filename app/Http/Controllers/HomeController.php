@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Models\Message;
 
 class HomeController extends Controller
 {
@@ -12,7 +13,9 @@ class HomeController extends Controller
     {
         $data = [
             'title' => 'Guest book on Laravel',
-            'pagetitle' => 'Guest book'
+            'pagetitle' => 'Guest book',
+            'messages' => Message::latest()->paginate(3),
+            'count' => Message::count()
         ];
 
         return view('pages.messages.index', $data);
