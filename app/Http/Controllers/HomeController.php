@@ -9,6 +9,9 @@ use App\Models\Message;
 
 class HomeController extends Controller
 {
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index()
     {
         $data = [
@@ -29,5 +32,22 @@ class HomeController extends Controller
         ];
 
         return view('pages.messages.edit', $data);
+    }
+
+    /**
+     * @param Message $postModel
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function deleteMessage(Message $postModel, $id)
+    {
+        $data = [
+            'title' => 'Delete: Guest book on Laravel',
+            'pagetitle' => 'Delete: Guest book'
+        ];
+
+        $postModel->messageDelete($id);
+
+        return view('pages.messages.delete', $data);
     }
 }

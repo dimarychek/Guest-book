@@ -15,7 +15,6 @@
                             @endunless
                         </span>
                         <span class="pull-right label label-info">
-                            {{--17:15:00 / 03.07.2015--}}
                             {{ $message->created_at }}
                         </span>
                     </h3>
@@ -24,12 +23,12 @@
                 <div class="panel-body">
                     {{ $message->message }}
                     <div class="pull-right">
-                        <a href="#" class="btn btn-info">
+                        <a href="/message/{{ $message->id }}/edit" class="btn btn-info">
                             <i class="glyphicon glyphicon-pencil"></i>
                         </a>
-                        <button class="btn btn-danger">
+                        <a href="/message/{{ $message->id }}/delete" class="btn btn-danger">
                             <i class="glyphicon glyphicon-trash"></i>
-                        </button>
+                        </a>
                     </div>
                 </div>
 
